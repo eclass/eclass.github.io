@@ -1,0 +1,56 @@
+/*------------------------------------------------------------------
+
+Name:     Section
+Created:  00/00/00
+Author:   Name <email>
+
+-------------------------------------------------------------------*/
+
+$component: 'Section';
+
+.#{$component} {
+	@extend .cf;
+	margin-bottom: 40px;
+	color: lighten(#ba3525, 35%);
+	text-align: center;
+	
+	h2 {
+		color: #e34b30;
+		font-family: $font-family-sans-serif-alt;
+		text-align: center;  		
+		padding-bottom: 20px;
+		margin-bottom: 40px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		@extend .cf;
+
+		li {
+			list-style: none;
+			@include span(1/4);
+			height: 200px;
+			margin-bottom: 10px;
+			padding: 0 20px;			
+			
+			a {
+				border-radius: 10px;
+				border: 2px solid lighten($brand-primary, 5%);
+				padding: 10px 20px;
+				display: block;
+				
+
+				&:hover {
+					background-color: #fff;
+					border-color: #fff;
+				}
+			}
+		}
+	}
+
+	&--workshops {
+
+	}
+}

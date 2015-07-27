@@ -1,0 +1,121 @@
+---
+title: eClass.io
+description: content
+---
+
+<div class="Hero">
+	<div class="Hero-video">
+		<video autoplay loop>
+			<source src="images/video.mp4" type="video/mp4" />
+			<source src="images/video.webm" type="video/webm" />
+		</video>
+		<div class="Hero-video-filter"></div>
+	</div>
+
+	<div class="Hero-content u-inner u-autoHeight">
+		<div class="d-table">
+			<div class="d-table-cell">
+				<div class="type">
+					<h1>eclass.io<span>|</span></h1>
+
+				</div>
+				<p>Experiments, Workshops and Contributions<br>by developers from eClass.</p>
+				<a href="http://github.com/eclass" target="blank"><i class="fa fa-github"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<img class="img-hero img-hero-1" src="images/hero-1.svg" alt="">
+	<img class="img-hero img-hero-2" src="images/hero-2.svg" alt="">
+	<img class="img-hero img-hero-3" src="images/hero-3.svg" alt="">
+</div>
+
+<main class="Main">
+	<div class="Main-content u-inner">
+
+		<section class="Section Section--workshops">
+			<h2>Workshops</h2>
+			<ul>
+				<li>
+					<a href="https://github.com/eclass/echat" target="blank">Chat with Node</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="Section">
+			<h2>Experiments</h2>
+			<ul>
+				<li>
+					<a href="https://github.com/eclass/kiosko" target="blank">Kiosko with CakePHP</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="Section">
+			<h2>Team Contributions</h2>
+			<ul>
+				<li>
+					<a href="https://github.com/quest/cakephp-elephant.io" target="blank">
+						ElephantIO Plugin for CakePHP <br>by Víctor San Martín
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/quest/cakephp-elephant.io" target="blank">
+						Plugin de Indicadores Económicos de Chile para CakePHP <br>by Víctor San Martín
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/quest/cakephp-elephant.io" target="blank">
+						Environment Plugin for CakePHP by Víctor San Martín
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/quest/cakephp-elephant.io" target="blank">
+						Santiagum 1.0 — A Medium-like WordPress theme by Juan Pablo Barrientos
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/quest/cakephp-elephant.io" target="blank">
+						Stylus port for font-awesome by Raúl Hernández
+					</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="Section">
+			<h2>Team</h2>
+
+			<div class="Team">
+				{{#each team}}
+					<div class="Team-item" data-github="{{this.github-user}}">
+						<div class="Team-item-image">
+							<div class="Team-item-image Team-item-image--a" style="background-image: url(images/{{this.image}});"></div>
+							<div class="Team-item-image Team-item-image--b" style="background-image: url(images/{{this.image-alt}});"></div>
+						</div>
+						<div class="Team-item-name">{{this.name}}</div>
+						<div class="Team-item-git">
+							<a href="http://github.com/{{this.github-user}}" target="blank">
+								<i class="fa fa-github"></i>
+								{{this.github-user}}
+							</a>
+						</div>
+					</div>
+
+				{{/each}}
+
+				<div class="Team-item">
+					<div class="Team-item-image" style="background-image: url(images/user.jpg);"></div>
+					<div class="Team-item-name">@name</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+</main>
+
+<div class="Footer">
+	<div class="Footer-content">
+		<i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by eClass Dev
+		
+	</div>
+</div>

@@ -1,0 +1,14 @@
+/*------------------------------------------------------------------
+
+Name:     PageBody
+Created:  00/00/00
+Author:   Name <email>
+
+-------------------------------------------------------------------*/
+
+$component: 'PageBody';
+
+.#{$component} {
+	background-color: #991f16;
+	/* @include responsive-report(); */
+}

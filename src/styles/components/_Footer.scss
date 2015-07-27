@@ -1,0 +1,22 @@
+/*
+ * Name: Footer
+ * Created: 2015-06-30 23:27 
+ * Author: Raúl Hernández M. <raulghm@gmail.com> 
+*/
+
+$component: 'Footer';
+
+.#{$component} {
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	color: #fff;
+	background-color: darken(#91d1c4, 60%);
+	position: fixed;
+	z-index: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+

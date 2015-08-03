@@ -1,24 +1,18 @@
 {
-  "name": "starter-kit",
+  "name": "raulghm",
+  "homepage": "https://github.com/raulghm",
   "authors": [
-    "Raul Hernandez <raulghm@gmail.com>"
+    "Raúl Hernández <raulghm@gmail.com>"
   ],
   "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components"
-  ],
+  "private": true,
   "dependencies": {
-    "modernizr": "~2.7.1",
+    "modernizr": "2.8.2",
+    "detectizr": "~2.0.0",
     "jquery-legacy": "jquery#1.11.2",
     "jquery-modern": "jquery#2.1.3",
     "selectivizr": "1.0.2",
     "respond": "1.4.2",
-    "normalize-css": "~3.0.3",
-    "raulghm-sass-utils": "~0.0.3-alpha",
-    "jeet": "~6.1.2",
-    "jeet.gs": "~6.1.2",
-    "font-awesome": "~4.3.0"
+    "bootstrap": "~3.3.5"
   }
 }

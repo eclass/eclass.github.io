@@ -1,0 +1,18 @@
+/**
+ * @define Footer
+ *
+ * @author Raul Hernandez <rhernandez@eclass.cl>
+ * @desc Description here
+ * @since 2015-08-01 00:51
+ */
+
+.Footer {
+	margin-top: 100px;
+
+	&-content {
+		padding: 20px;
+		color: var(--color-primary);
+		text-align: center;
+		font-size: 16px;
+	}
+}

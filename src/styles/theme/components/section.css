@@ -1,0 +1,129 @@
+/**
+ * @define Section
+ *
+ * @author Raul Hernandez <rhernandez@eclass.cl>
+ * @desc Section component
+ * @since 2015-07-28 16:36
+ */
+
+.Section {
+	clear: fix;
+	text-align: center;
+	position: relative;
+
+	&:after {
+		content: '';
+		background-image: url(../../../images/sep-red.png);
+		background-repeat: repeat-x;
+		background-size: 20px;
+		width: 150px;
+		margin-left: -75px;
+		height: 20px;
+		position: absolute;
+		bottom: -80px;
+		left: 50%;
+	}
+
+	&:last-child {
+		&:after {
+			display: none;
+		}
+	}
+
+	&:first-child {
+		.Section {
+			&-title {
+				margin-top: 100px;
+			}
+		}
+	}
+
+	&-title {
+		margin-top: 200px;
+		margin-bottom: 20px;
+		position: relative;
+
+		h2 {
+			color: var(--color-white);
+			font-family: var(--font-family-serif);
+			font-size: 3em;
+			margin-bottom: 10px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				margin-top: -40px;
+				left: 50%;
+				width: 300px;
+				margin-left: -140px;
+				height: 40px;
+				transform: rotate(40deg);
+				background-color: rgba(var(--color-primary), 0.2);
+				z-index: -1;
+			}
+		}
+
+		small {
+			color: var(--color-primary);
+			font-style: italic;
+			font-size: 14px;
+		}
+	}
+
+	&-list {
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		clear: fix;
+		list-style: none;
+		text-align: right;
+		margin-top: 20px;
+
+		&-item {
+			margin-bottom: 10px;
+			padding: 0 20px;
+
+			a {
+				border-bottom: 2px solid var(--color-primary);
+				font-style: italic;
+				font-size: 20px;
+				color: var(--color-white);
+				width: 100%;
+
+				&:hover {
+					border-color: #fff;
+				}
+			}
+
+			small {
+				color: var(--color-primary);
+				display: inline-block;
+				width: 100%;
+			}
+		}
+	}
+
+	&--workshops {
+
+	}
+
+	/**
+	 * team
+	 */
+	&--team {
+		.Section {
+			&-title {
+				margin-top: 140px;
+
+				h2 {
+					color: color(var(--color-primary) a(30%));
+
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

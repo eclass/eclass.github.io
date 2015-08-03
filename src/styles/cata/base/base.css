@@ -1,0 +1,160 @@
+/*
+ * Base
+ */
+
+/*
+ * box model like it should be
+ *
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+html {
+  box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications. Removes the default spacing and border for
+ * appropriate elements.
+ */
+
+html {
+  background: var(--base-background-color);
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  color: var(--base-color);
+  line-height: var(--base-line-height);
+}
+
+a {
+  color: var(--base-link-color);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--base-link-color-hover);
+  text-decoration: underline;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+
+
+
+/*https://github.com/cssrecipes/defaults*/
+
+/*
+ * tables borders like they should be
+ * applied to * to also works for display: table;
+ */
+html {
+	border-collapse: collapse
+}
+
+* {
+	border-collapse: inherit
+}
+
+/*
+ * Makes the hidden attribute works even when an element is styled display: flex
+ * http://lists.w3.org/Archives/Public/public-whatwg-archive/2014May/0001.html
+ */
+[hidden] {
+	display: none !important
+}
+
+/*
+ * Repeating the background mostly makes sense in the <body>. Otherwise, people
+ * usually want the image and preferably its center (not the top-right corner)
+ */
+/**:not(body) {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+*/
+
+/*other*/
+
+hr {
+  margin-top:    10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid $hr-border;
+}
+
+/**
+ * Custom media queries
+ */
+@custom-media --small (min-width: 24em);
+@custom-media --small-2 (min-width: 29.75em);
+@custom-media --small-3 (min-width: 39.8em);
+@custom-media --medium (min-width: 46.8em);
+@custom-media --medium-2 (min-width: 48em);
+@custom-media --large (min-width: 50em);
+@custom-media --large-2 (min-width: 54.5em);
+@custom-media --xl (min-width: 60em);
+@custom-media --xl-2 (min-width: 67em);

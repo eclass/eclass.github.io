@@ -1,0 +1,74 @@
+:root {
+	/*Settings*/
+	--base-line-height: var(--perfect-fifth);
+	--line-height-computed: calc(var(--base-font-size) * var(--base-line-height));
+	--font-family-sans-serif: 'Open Sans', var(--font-family-helvetica);
+	--font-family-serif: 'Arbutus Slab', var(--font-family-lucida-bright);
+	--font-family-code: var(--font-family-courier);
+
+	--base-background-color: #1E0400;
+	--base-font-weight: 300;
+	--base-color: var(--color-white);
+	--base-font-family: var(--font-family-sans-serif);
+	--base-font-size: 14px;
+	--base-link-color: #069;
+	--base-link-color-hover: --base-link-color;
+
+	/* base colors */
+	--color-white:  #fff;
+	--color-silver: #ddd;
+	--color-gray:   #aaa;
+	--color-black:  #111;
+
+	/*gray colors*/
+	--color-gray: #111;
+	--color-gray-darker: #222;
+	--color-gray-dark: #333;
+	--color-gray: #555;
+	--color-gray-light: #777;
+	--color-gray-lighter: #eee;
+
+	/*brand colors*/
+	--color-primary: #B22E13;
+	--color-success: #5cb85c;
+	--color-info: #5bc0de;
+	--color-warning: #f0ad4e;
+	--color-danger: #d9534f;
+
+	/*Ratios*/
+	--minor-second   : 1.067;
+	--major-second   : 1.125;
+	--minor-third    : 1.2;
+	--major-third    : 1.25;
+	--perfect-fourth : 1.333;
+	--aug-fourth     : 1.414;
+	--perfect-fifth  : 1.5;
+	--minor-sixth    : 1.6;
+	--golden         : 1.618;
+	--major-sixth    : 1.667;
+	--minor-seventh  : 1.778;
+	--major-seventh  : 1.875;
+	--octave         : 2;
+	--major-tenth    : 2.5;
+	--major-eleventh : 2.667;
+	--major-twelfth  : 3;
+	--double-octave  : 4;
+
+	/*Type variables*/
+
+	--font-size-large:         calc(var(--base-font-size) * 1.25);
+	--font-size-small:         calc(var(--base-font-size) * 0.85);
+
+	--font-size-h1:            calc(var(--base-font-size) * 2.6);
+	--font-size-h2:            calc(var(--base-font-size) * 2.15);
+	--font-size-h3:            calc(var(--base-font-size) * 1.7);
+	--font-size-h4:            calc(var(--base-font-size) * 1.25);
+	--font-size-h5:            var(--base-font-size);
+	--font-size-h6:            calc(var(--base-font-size) * 0.85);
+
+	--headings-font-family: 'Open Sans', var(--font-family-sans-serif);
+	--headings-font-weight: 500;
+	--headings-line-height: 1.1;
+	--headings-color: inherit;
+	--headings-small-color: var(--color-gray-light);
+}

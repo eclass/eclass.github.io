@@ -22,6 +22,7 @@ import postcssClearfix from 'postcss-clearfix';
 import postcssStyleGuide from 'postcss-style-guide';
 import postcssHexrgba from 'postcss-hexrgba';
 import postcssResponsiveType from 'postcss-responsive-type';
+import postcssEasings from 'postcss-easings';
 import stylelint from 'stylelint';
 import configSuitcss from 'stylelint-config-suitcss';
 import assign from 'lodash.assign';
@@ -146,6 +147,7 @@ gulp.task('styles', () => {
 			postcssNested,
 			postcssHexrgba,
 			postcssResponsiveType,
+			postcssEasings,
 			lost,
 			postcssReporter({
 				clearMessages: true,
@@ -197,6 +199,7 @@ gulp.task('vendorScripts', () => {
  */
 gulp.task('scripts', () => {
 	const SCRIPTS = [
+		'node_modules/jquery/dist/jquery.js',
 		SRC + 'scripts/**/*.js',
 	];
 	return gulp.src(SCRIPTS)

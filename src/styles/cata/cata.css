@@ -18,7 +18,6 @@
 /**
  * Vendor
  */
-
 @import "suitcss-base";
 @import "suitcss-utils";
 
@@ -28,3 +27,4 @@
 @import './base/variables';
 @import './base/base';
 @import './base/type';
+@import './base/mq';

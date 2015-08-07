@@ -10,6 +10,7 @@
 	clear: fix;
 	text-align: center;
 	position: relative;
+	padding: 40px 0;
 
 	&:after {
 		content: '';
@@ -38,16 +39,57 @@
 		}
 	}
 
+	@media (--small-3) {
+		&:hover {
+			.Section {
+				&-title {
+					h2 {
+						&:before {
+							transform: rotate(-40deg);
+							background-color: rgba(var(--color-primary), 0.4);
+						}
+					}
+
+					small {
+						opacity: 1;
+						transform: translateY(0) translateX(40px);
+					}
+				}
+			}
+		}
+
+		&:nth-child(even) {
+			.Section {
+				&-title {
+					margin-left: 300px;
+				}
+
+				&-list {
+					text-align: right;
+					margin-left: -50%;
+				}
+			}
+		}
+	}
+
+	/**
+	 * title
+	 */
 	&-title {
-		margin-top: 200px;
+		margin-top: 160px;
 		margin-bottom: 20px;
 		position: relative;
+
+		@media (--small-3) {
+			margin-left: -300px;
+		}
 
 		h2 {
 			color: var(--color-white);
 			font-family: var(--font-family-serif);
 			font-size: 3em;
 			margin-bottom: 10px;
+			transition: all .3s ease;
 
 			&:before {
 				content: '';
@@ -61,6 +103,11 @@
 				transform: rotate(40deg);
 				background-color: rgba(var(--color-primary), 0.2);
 				z-index: -1;
+				transition: all .3s ease;
+			}
+
+			&:hover {
+				/*color: var(--color-primary);*/
 			}
 		}
 
@@ -68,18 +115,35 @@
 			color: var(--color-primary);
 			font-style: italic;
 			font-size: 14px;
+			display: inline-block;
+			transition: all .6s easeOutBack;
+			/*opacity: 0;*/
+
+			@media (--small-3) {
+				transform: translateX(-80px);
+			}
 		}
 	}
 
+	/**
+	 * list
+	 */
 	&-list {
 		margin: 0;
 		padding: 0;
 		display: inline-block;
 		clear: fix;
 		list-style: none;
-		text-align: right;
 		margin-top: 20px;
 
+		@media (--small-3) {
+			text-align: right;
+			margin-left: 50%;
+		}
+
+		/**
+		 * list-item
+		 */
 		&-item {
 			margin-bottom: 10px;
 			padding: 0 20px;
@@ -98,14 +162,11 @@
 
 			small {
 				color: var(--color-primary);
+
 				display: inline-block;
 				width: 100%;
 			}
 		}
-	}
-
-	&--workshops {
-
 	}
 
 	/**
@@ -115,6 +176,7 @@
 		.Section {
 			&-title {
 				margin-top: 140px;
+				margin-left: 0 !important;
 
 				h2 {
 					color: color(var(--color-primary) a(30%));

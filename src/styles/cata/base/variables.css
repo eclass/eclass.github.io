@@ -1,4 +1,4 @@
-/*
+/**
  * Variables
  */
 
@@ -23,7 +23,7 @@
 	--color-gray:   #aaa;
 	--color-black:  #111;
 
-	/*gray colors*/
+	/* gray colors */
 	--color-gray: #111;
 	--color-gray-darker: #222;
 	--color-gray-dark: #333;
@@ -31,7 +31,7 @@
 	--color-gray-light: #777;
 	--color-gray-lighter: #eee;
 
-	/*brand colors*/
+	/* brand colors */
 	--color-primary: #337ab7;
 	--color-success: #5cb85c;
 	--color-info: #5bc0de;
@@ -57,10 +57,9 @@
 	--purple: #b10dc9;
 	--maroon: #85144b;
 
-	/*Typographic v2.9.2 - https://github.com/corysimmons/typographic*/
+	/* Typographic v2.9.2 - https://github.com/corysimmons/typographic */
 
-	/*Ratios*/
-
+	/* Ratios */
 	--minor-second   : 1.067;
 	--major-second   : 1.125;
 	--minor-third    : 1.2;
@@ -79,10 +78,9 @@
 	--major-twelfth  : 3;
 	--double-octave  : 4;
 
-	/*http://www.awayback.com/revised-font-stack/*/
+	/* http://www.awayback.com/revised-font-stack */
 
-	/*Sans-serif*/
-
+	/* Sans-serif */
 	--font-family-calibri       : 'Calibri', 'Candara', 'Segoe', 'Segoe UI', 'Optima', 'Arial', 'sans-serif';
 	--font-family-candara       : 'Candara', 'Calibri', 'Segoe', 'Segoe UI', 'Optima', 'Arial', 'sans-serif';
 	--font-family-courier       : 'Courier New', 'Courier', 'Lucida Sans Typewriter', 'Lucida Typewriter', 'monospace';
@@ -98,8 +96,7 @@
 	--font-family-trebuchet     : 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Tahoma', 'sans-serif';
 	--font-family-verdana       : 'Verdana', 'Geneva', 'sans-serif';
 
-	/*Serif*/
-
+	/* Serif */
 	--font-family-antiqua       : 'Book Antiqua', 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Georgia', 'serif';
 	--font-family-baskerville   : 'Baskerville', 'Baskerville old face', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
 	--font-family-bodoni        : 'Bodoni MT', 'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
@@ -113,7 +110,7 @@
 	--font-family-lucida-bright : 'Lucida Bright', 'Georgia', 'serif';
 	--font-family-palatino      : 'Palatino', 'Palatino Linotype', 'Palatino LT STD', "Book Antiqua", 'Georgia', 'serif';
 
-	/*Type variables*/
+	/* Type variables */
 
 	--font-size-large:         calc(var(--base-font-size) * 1.25);
 	--font-size-small:         calc(var(--base-font-size) * 0.85);

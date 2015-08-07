@@ -2,17 +2,35 @@
  * @define Footer
  *
  * @author Raul Hernandez <rhernandez@eclass.cl>
- * @desc Description here
+ * @desc Footer component
  * @since 2015-08-01 00:51
  */
 
 .Footer {
 	margin-top: 100px;
+	position: relative;
 
 	&-content {
 		padding: 20px;
 		color: var(--color-primary);
 		text-align: center;
 		font-size: 16px;
+		position: relative;
+		z-index: 1;
+	}
+
+	img {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: inline-block;
+		z-index: 0;
+		max-width: 100%;
+		margin: 0 auto;
+
+		@media (--small-3) {
+			max-width: 420px;
+		}
 	}
 }

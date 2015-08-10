@@ -33,6 +33,11 @@
 	],
 	"contributions": [
 		{
+			"name": "AngularJS Environment Plugin",
+			"author": "Juan Pablo Barrientos L.",
+			"link": "http://github.com/juanpablob/angular-environment"
+		},
+		{
 			"name": "Multi Brand Colors with support for CSS/CSS-Vars/SCSS/SASS/Stylus/LESS/JSON",
 			"author": "Raúl Hernández",
 			"link": "https://github.com/raulghm/multi-brand-colors"

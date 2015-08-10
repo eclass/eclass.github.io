@@ -1,18 +1,13 @@
 {
   "name": "raulghm",
-  "homepage": "https://github.com/raulghm",
+  "version": "0.2.0",
   "authors": [
     "Raúl Hernández <raulghm@gmail.com>"
   ],
+  "homepage": "https://eclass.io",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "modernizr": "2.8.2",
-    "detectizr": "~2.0.0",
-    "jquery-legacy": "jquery#1.11.2",
-    "jquery-modern": "jquery#2.1.3",
-    "selectivizr": "1.0.2",
-    "respond": "1.4.2",
-    "bootstrap": "~3.3.5"
+    "jquery-legacy": "jquery#1.11.2"
   }
 }

@@ -70,7 +70,21 @@
 		{
 			"name": "ElephantIO Plugin for CakePHP",
 			"author": "Víctor San Martín",
-			"link": "https://github.com/quest/cakephp-elephant.iog"
+			"link": "http://github.com/quest/cakephp-elephant.io"
+		}
+	],
+	"workshops": [
+		{
+			"name": "Workshop de Nodejs",
+			"author": "Víctor San Martín",
+			"link": "https://github.com/eclass/echat"
+		}
+	],
+	"experiments": [
+		{
+			"name": "Kiosko with CakePHP",
+			"author": "Víctor San Martín",
+			"link": "https://github.com/eclass/kiosko"
 		}
 	]
 }

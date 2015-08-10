@@ -17,10 +17,6 @@
 	min-height: 300px;
 	z-index: 1;
 
-	/*@include bp-small-3() {
-		min-height: 600px;
-	}*/
-
 	/**
 	 * video
 	 */
@@ -68,21 +64,9 @@
 		z-index: 2;
 		position: relative;
 
-		/*@include bp-small-3() {
-			padding-top: 20%;
-		}
-
-		@include bp-medium-2() {
-			padding-top: 0;
-		}*/
-
 		i {
 			display: block;
 			transition: all .5s ease;
-
-			/*@include bp-small-3() {
-				@include font-size(5);
-			}*/
 		}
 
 		a {
@@ -181,6 +165,7 @@
 		@media (--small-3) {
 			padding-top: 40px;
 			display: block;
+			margin-top: -8%;
 		}
 
 		&-mob {
@@ -207,6 +192,7 @@
 
 			&:nth-child(7) {
 				position: relative;
+				top: -30px;
 			}
 
 			&:nth-child(6) {
@@ -226,7 +212,7 @@
 			}
 
 			&:nth-child(2) {
-				top: -100px;
+				top: -60px;
 			}
 
 			&:nth-child(1) {

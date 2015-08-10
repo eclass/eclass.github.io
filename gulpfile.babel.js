@@ -28,6 +28,7 @@ import configSuitcss from 'stylelint-config-suitcss';
 import assign from 'lodash.assign';
 import lost from 'lost';
 import cssnext from 'cssnext';
+import pngquant from 'imagemin-pngquant';
 
 /**
  * Setting constants
@@ -65,10 +66,10 @@ gulp.task('lint', () => {
  */
 gulp.task('vendor', () => {
 	return merge(
-		gulp.src(BOWER + '/respond/dest/respond.min.js')
-			.pipe(gulp.dest(DEST + '/scripts')),
-		gulp.src(BOWER + '/selectivizr/selectivizr.js')
-			.pipe(gulp.dest(DEST + '/scripts')),
+		// gulp.src(BOWER + '/respond/dest/respond.min.js')
+		// 	.pipe(gulp.dest(DEST + '/scripts')),
+		// gulp.src(BOWER + '/selectivizr/selectivizr.js')
+		// 	.pipe(gulp.dest(DEST + '/scripts')),
 		gulp.src(BOWER + '/jquery-legacy/dist/jquery.min.js')
 			.pipe($.rename('jquery-legacy.min.js'))
 			.pipe(gulp.dest(DEST + '/scripts')),
@@ -92,6 +93,11 @@ gulp.task('fonts', () => {
  */
 gulp.task('images', () => {
 	return gulp.src([SRC + 'images/**/**'])
+		.pipe($.if(RELEASE, $.imagemin({
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()],
+		})))
 		.pipe(gulp.dest(DEST + 'images'));
 });
 
@@ -179,21 +185,6 @@ gulp.task('styleguide', () => {
 		.pipe(gulp.dest(DEST + '/styles'));
 });
 
- /**
-  * Vendor scripts
-  */
-gulp.task('vendorScripts', () => {
-	const VENDOR_SCRIPTS = [
-		BOWER + 'jquery-modern/dist/jquery.js',
-		BOWER + 'bootstrap/dist/js/bootstrap.js',
-	];
-	return gulp.src(VENDOR_SCRIPTS)
-		.pipe($.concat('vendor.js'))
-		.pipe($.if(RELEASE, $.uglify({preserveComments: 'some'})))
-		.pipe($.size({title: 'vendor scripts'}))
-		.pipe(gulp.dest(DEST + 'scripts'));
-});
-
 /**
  * Scripts
  */
@@ -205,10 +196,10 @@ gulp.task('scripts', () => {
 	return gulp.src(SCRIPTS)
 		/* .pipe($.changed(DEST + 'scripts', {extension: '.js'}))*/
 		.pipe($.concat('scripts.js'))
-		.pipe($.if(RELEASE, $.uglify({preserveComments: 'some'})))
 		.pipe($.babel({
 			comments: false,
 		}))
+		.pipe($.if(RELEASE, $.uglify({preserveComments: 'some'})))
 		.pipe($.size({title: 'scripts'}))
 		.pipe(gulp.dest(DEST + 'scripts'))
 		.pipe($.if(!RELEASE, reload({stream: true})));
@@ -230,8 +221,8 @@ gulp.task('pages', () => {
 			layoutext: '.hbs',
 			layoutdir: SRC + '/templates/layouts',
 		})))
-		.pipe($.if(RELEASE, $.htmlmin({removeComments: true})))
 		.pipe($.size({title: 'HTML'}))
+		.pipe($.prettify({indent_size: 2}))
 		.pipe(gulp.dest(DEST))
 		.pipe($.if(!RELEASE, reload({stream: true})));
  });
@@ -251,12 +242,11 @@ gulp.task('default', ['serve', 'watch']);
  */
 gulp.task('build', () => {
 	runSequence([
-		/* 'clean',*/
 		'fonts',
 		'images',
 		'pages',
 		'styles',
-		'vendorScripts',
+		'vendor',
 		'scripts',
 	]);
 });

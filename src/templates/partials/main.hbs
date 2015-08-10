@@ -1,6 +1,24 @@
 <main class="Main">
 	<div class="Main-content u-inner">
 
+		<section class="Section Section--contributions">
+			<div class="Section-title">
+				<h2>Contributions</h2>
+				<small>Hacemos cositas</small>
+			</div>
+
+			<ul class="Section-list">
+				{{#each contributions}}
+					<li class="Section-list-item">
+						<a href="{{this.link}}" target="blank">
+							{{this.name}}
+						</a>
+						<small>{{this.author}}</small>
+					</li>
+				{{/each}}
+			</ul>
+		</section>
+		
 		<section class="Section Section--workshops">
 			<div class="Section-title">
 				<h2>Workshops</h2>
@@ -8,9 +26,11 @@
 			</div>
 
 			<ul class="Section-list">
+				{{#each workshops}}
 				<li class="Section-list-item">
-					<a href="https://github.com/eclass/echat" target="blank">Chat with Node</a>
+					<a href="{{this.link}}" target="blank">{{this.name}}</a>
 				</li>
+				{{/each}}
 			</ul>
 		</section>
 
@@ -21,31 +41,11 @@
 			</div>
 
 			<ul class="Section-list">
+				{{#each experiments}}
 				<li class="Section-list-item">
-					<a href="https://github.com/eclass/echat" target="blank">Kiosko with CakePHP</a>
+					<a href="{{this.link}}" target="blank">{{this.name}}</a>
 				</li>
-			</ul>
-		</section>
-
-		<section class="Section Section--contributions">
-			<div class="Section-title">
-				<h2>Contributions</h2>
-				<small>Hacemos cositas</small>
-			</div>
-
-			<ul class="Section-list">
-				<li class="Section-list-item">
-					<a href="https://github.com/quest/cakephp-elephant.io" target="blank">
-						ElephantIO Plugin for CakePHP
-					</a>
-					<small>by Víctor San Martín</small>
-				</li>
-				<li class="Section-list-item">
-					<a href="https://github.com/quest/cakephp-elephant.io" target="blank">
-						Plugin de Indicadores Económicos de Chile para CakePHP
-					</a>
-					<small>by Víctor San Martín</small>
-				</li>
+				{{/each}}
 			</ul>
 		</section>
 

@@ -7,15 +7,9 @@
 			"image-alt": "raulghm.jpg"
 		},
 		{
-			"name": "Ignacio Opazo",
-			"github-user": "iopazo",
-			"image": "iopazo.jpg",
-			"image-alt": "iopazo-alt.jpg"
-		},
-		{
 			"name": "Dauno Martínez",
 			"github-user": "dauno",
-			"image": "dauno-alt.jpg",
+			"image": "dauno.jpg",
 			"image-alt": "dauno.jpg"
 		},
 		{
@@ -27,8 +21,8 @@
 		{
 			"name": "Juan Pablo Barrientos",
 			"github-user": "juanpablob",
-			"image": "user.jpg",
-			"image-alt": "user.jpg"
+			"image": "jp.jpg",
+			"image-alt": "jp.jpg"
 		}
 	],
 	"contributions": [

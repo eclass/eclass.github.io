@@ -8,12 +8,14 @@ html {
   /*min-width: 800px;*/
 }
 
+/* uncss:ignore */
 html.init {
   body {
     visibility: visible;
   }
 }
 
+/* uncss:ignore */
 html.init-2 {
   body {
     opacity: 1;

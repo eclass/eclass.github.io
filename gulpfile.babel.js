@@ -190,7 +190,6 @@ gulp.task('styleguide', () => {
  */
 gulp.task('scripts', () => {
 	const SCRIPTS = [
-		'node_modules/jquery/dist/jquery.js',
 		SRC + 'scripts/**/*.js',
 	];
 	return gulp.src(SCRIPTS)

@@ -1,0 +1,13 @@
+{
+  "name": "raulghm",
+  "version": "0.2.0",
+  "authors": [
+    "Raúl Hernández <raulghm@gmail.com>"
+  ],
+  "homepage": "https://eclass.io",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery-legacy": "jquery#1.11.2"
+  }
+}

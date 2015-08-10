@@ -1,0 +1,18 @@
+.u-inner {
+	max-width: 1200px;
+	/*min-width: 800px;*/
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.u-table {
+	display: table;
+	height: inherit;
+	width: 100%;
+
+	.u-table-cell {
+		height: inherit;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}

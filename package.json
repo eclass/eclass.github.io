@@ -1,0 +1,90 @@
+{
+  "name": "raulghm",
+  "authors": [
+    "Raúl Hernández <raulghm@gmail.com>"
+  ],
+  "homepage": "https://eclass.io",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eclass/eclass.github.io.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "scripts": {
+    "install": "bower install",
+    "dist": "gulp clean && gulp build --dist"
+  },
+  "engines": {
+    "node": ">= 0.12.0",
+    "npm": ">=2.1.5"
+  },
+  "dependencies": {
+    "babel-core": "^5.8.3",
+    "babel-eslint": "^3.1.26",
+    "browser-sync": "^2.8.0",
+    "cssnext": "^1.8.2",
+    "del": "^1.2.0",
+    "eslint": "^0.24.1",
+    "font-awesome": "^4.4.0",
+    "gulp": "^3.9.0",
+    "gulp-assemble": "^0.1.7",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-babel": "^5.1.0",
+    "gulp-changed": "^1.2.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^1.1.0",
+    "gulp-cssnext": "^1.0.1",
+    "gulp-eslint": "^0.15.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jscs": "^2.0.0",
+    "gulp-jscs-stylish": "^1.1.1",
+    "gulp-jshint": "^1.11.2",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^5.1.10",
+    "gulp-prettify": "^0.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-size": "^1.2.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-strip-css-comments": "^1.1.0",
+    "gulp-strip-debug": "^1.0.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-uncss": "^1.0.2",
+    "gulp-watch": "^4.3.3",
+    "imagemin-pngquant": "^4.1.2",
+    "jquery": "^2.1.4",
+    "jscs-jsdoc": "^1.1.0",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1",
+    "lodash.assign": "^3.2.0",
+    "lost": "^6.5.0",
+    "merge-stream": "^0.1.8",
+    "minimist": "^1.1.1",
+    "plumber": "^0.4.8",
+    "postcss-bem": "^0.3.0",
+    "postcss-bem-linter": "^0.4.0",
+    "postcss-clearfix": "^0.1.3",
+    "postcss-easings": "^0.2.0",
+    "postcss-hexrgba": "^0.1.2",
+    "postcss-import": "^6.2.0",
+    "postcss-nested": "^0.3.2",
+    "postcss-reporter": "^0.3.1",
+    "postcss-responsive-type": "^0.1.1",
+    "postcss-style-guide": "^0.4.2",
+    "run-sequence": "^1.1.1",
+    "stylelint": "^0.4.1",
+    "stylelint-config-suitcss": "^0.3.0",
+    "suitcss-base": "^0.8.0",
+    "suitcss-utils": "^0.10.3"
+  }
+}

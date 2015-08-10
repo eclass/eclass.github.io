@@ -1,0 +1,47 @@
+html {
+  background: var(--base-background-color);
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  color: var(--base-color);
+  line-height: var(--base-line-height);
+  font-size: responsive;
+  /*min-width: 800px;*/
+}
+
+html.init {
+  body {
+    visibility: visible;
+  }
+}
+
+html.init-2 {
+  body {
+    opacity: 1;
+  }
+}
+
+body {
+	transition: opacity .4s ease;
+	visibility: hidden;
+	opacity: 0;
+}
+
+ul {
+	ul {
+		margin-left: 10px;
+	}
+
+	li {
+		margin-bottom: 5px;
+	}
+}
+
+p {
+	margin: 10px 0;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}

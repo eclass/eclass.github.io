@@ -1,0 +1,95 @@
+{
+	"team": [
+		{
+			"name": "Raúl Hernández",
+			"github-user": "raulghm",
+			"image": "raulghm.jpg",
+			"image-alt": "raulghm.jpg"
+		},
+		{
+			"name": "Ignacio Opazo",
+			"github-user": "iopazo",
+			"image": "iopazo.jpg",
+			"image-alt": "iopazo-alt.jpg"
+		},
+		{
+			"name": "Dauno Martínez",
+			"github-user": "dauno",
+			"image": "dauno-alt.jpg",
+			"image-alt": "dauno.jpg"
+		},
+		{
+			"name": "Victor San Martin",
+			"github-user": "quest",
+			"image": "quest.png",
+			"image-alt": "quest.png"
+		},
+		{
+			"name": "Juan Pablo Barrientos",
+			"github-user": "juanpablob",
+			"image": "user.jpg",
+			"image-alt": "user.jpg"
+		}
+	],
+	"contributions": [
+		{
+			"name": "AngularJS Environment Plugin",
+			"author": "Juan Pablo Barrientos L.",
+			"link": "http://github.com/juanpablob/angular-environment"
+		},
+		{
+			"name": "Multi Brand Colors with support for CSS/CSS-Vars/SCSS/SASS/Stylus/LESS/JSON",
+			"author": "Raúl Hernández",
+			"link": "https://github.com/raulghm/multi-brand-colors"
+		},
+		{
+			"name": "Frontend-tools - Workflow",
+			"author": "Raúl Hernández",
+			"link": "https://github.com/raulghm/frontend-tools"
+		},
+		{
+			"name": "Starter-kit - Boilerplate basado en Gulp para crear sites/apps en eClass",
+			"author": "Raúl Hernández",
+			"link": "https://github.com/eclass/starter-kit"
+		},
+		{
+			"name": "Stylus port for font-awesome",
+			"author": "Raúl Hernández",
+			"link": "https://github.com/raulghm/Font-Awesome-Stylus"
+		},
+		{
+			"name": "Santiagum 1.0 — A Medium-like WordPress theme",
+			"author": "Juan Pablo Barrientos",
+			"link": "https://github.com/juanpablob/santiagum"
+		},
+		{
+			"name": "Environment Plugin for CakePHP",
+			"author": "Víctor San Martín",
+			"link": "https://github.com/quest/cakephp-environment"
+		},
+		{
+			"name": "Plugin de Indicadores Económicos de Chile para CakePHP",
+			"author": "Víctor San Martín",
+			"link": "https://github.com/quest/cakephp-indicadores"
+		},
+		{
+			"name": "ElephantIO Plugin for CakePHP",
+			"author": "Víctor San Martín",
+			"link": "http://github.com/quest/cakephp-elephant.io"
+		}
+	],
+	"workshops": [
+		{
+			"name": "Workshop de Nodejs",
+			"author": "Víctor San Martín",
+			"link": "https://github.com/eclass/echat"
+		}
+	],
+	"experiments": [
+		{
+			"name": "Kiosko with CakePHP",
+			"author": "Víctor San Martín",
+			"link": "https://github.com/eclass/kiosko"
+		}
+	]
+}

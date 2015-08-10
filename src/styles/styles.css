@@ -1,0 +1,17 @@
+/**
+ * Styles
+ *
+ * @author Raul Hernandez <raulghm@gmail.com>
+ * @desc Master styles file
+ * @since 2015-07-
+ */
+
+/**
+ * Cata
+ */
+@import './catacss/catacss';
+
+/**
+ * Theme
+ */
+@import './theme/index';

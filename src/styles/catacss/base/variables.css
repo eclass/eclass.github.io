@@ -1,0 +1,130 @@
+/**
+ * Variables
+ */
+
+:root {
+	--base-line-height: var(--perfect-fifth);
+	--line-height-computed: calc(var(--base-font-size) * var(--base-line-height));
+	--font-family-sans-serif: var(--font-family-helvetica);
+	--font-family-serif: var(--font-family-lucida-bright);
+	--font-family-code: var(--font-family-courier);
+
+	--base-background-color: #fff;
+	--base-font-weight: 300;
+	--base-color: inherit;
+	--base-font-family: var(--font-family-sans-serif);
+	--base-font-size: 14px;
+	--base-link-color: #069;
+	--base-link-color-hover: --base-link-color;
+
+	/* base colors */
+	--color-white:  #fff;
+	--color-silver: #ddd;
+	--color-gray:   #aaa;
+	--color-black:  #111;
+
+	/* gray colors */
+	--color-gray: #111;
+	--color-gray-darker: #222;
+	--color-gray-dark: #333;
+	--color-gray: #555;
+	--color-gray-light: #777;
+	--color-gray-lighter: #eee;
+
+	/* brand colors */
+	--color-primary: #337ab7;
+	--color-success: #5cb85c;
+	--color-info: #5bc0de;
+	--color-warning: #f0ad4e;
+	--color-danger: #d9534f;
+
+	/* New colors from https://github.com/mrmrs/colors/blob/master/myth/variables.css */
+
+	/* Cool */
+	--aqua:   #7fdbff;
+	--blue:   #0074d9;
+	--navy:   #001f3f;
+	--teal:   #39cccc;
+	--green:  #2ecc40;
+	--olive:  #3d9970;
+	--lime:   #01ff70;
+
+	/* Warm */
+	--yellow: #ffdc00;
+	--orange: #ff851b;
+	--red:    #ff4136;
+	--fuchsia:#f012be;
+	--purple: #b10dc9;
+	--maroon: #85144b;
+
+	/* Typographic v2.9.2 - https://github.com/corysimmons/typographic */
+
+	/* Ratios */
+	--minor-second   : 1.067;
+	--major-second   : 1.125;
+	--minor-third    : 1.2;
+	--major-third    : 1.25;
+	--perfect-fourth : 1.333;
+	--aug-fourth     : 1.414;
+	--perfect-fifth  : 1.5;
+	--minor-sixth    : 1.6;
+	--golden         : 1.618;
+	--major-sixth    : 1.667;
+	--minor-seventh  : 1.778;
+	--major-seventh  : 1.875;
+	--octave         : 2;
+	--major-tenth    : 2.5;
+	--major-eleventh : 2.667;
+	--major-twelfth  : 3;
+	--double-octave  : 4;
+
+	/* http://www.awayback.com/revised-font-stack */
+
+	/* Sans-serif */
+	--font-family-calibri       : 'Calibri', 'Candara', 'Segoe', 'Segoe UI', 'Optima', 'Arial', 'sans-serif';
+	--font-family-candara       : 'Candara', 'Calibri', 'Segoe', 'Segoe UI', 'Optima', 'Arial', 'sans-serif';
+	--font-family-courier       : 'Courier New', 'Courier', 'Lucida Sans Typewriter', 'Lucida Typewriter', 'monospace';
+	--font-family-franklin      : 'Franklin Gothic Medium', 'Arial', 'sans-serif';
+	--font-family-futura        : 'Futura', 'Trebuchet MS', 'Arial', 'sans-serif';
+	--font-family-geneva        : 'Geneva', 'Tahoma', 'Verdana', 'sans-serif';
+	--font-family-gill-sans     : 'Gill Sans', 'Gill Sans MT', 'Calibri', 'sans-serif';
+	--font-family-helvetica     : 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+	--font-family-lucida-grande : 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', 'Verdana', 'sans-serif';
+	--font-family-optima        : 'Optima', 'Segoe', 'Segoe UI', 'Candara', 'Calibri', 'Arial', 'sans-serif';
+	--font-family-segoe         : 'Segoe', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif';
+	--font-family-tahoma        : 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+	--font-family-trebuchet     : 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Tahoma', 'sans-serif';
+	--font-family-verdana       : 'Verdana', 'Geneva', 'sans-serif';
+
+	/* Serif */
+	--font-family-antiqua       : 'Book Antiqua', 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Georgia', 'serif';
+	--font-family-baskerville   : 'Baskerville', 'Baskerville old face', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
+	--font-family-bodoni        : 'Bodoni MT', 'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
+	--font-family-cambria       : 'Cambria', 'Georgia', 'serif';
+	--font-family-caslon        : 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', 'Georgia', 'serif';
+	--font-family-constantia    : 'Constantia', 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Georgia', 'serif';
+	--font-family-didot         : 'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
+	--font-family-garamond      : 'Garamond', 'Baskerville', 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', 'serif';
+	--font-family-goudy         : 'Goudy Old Style', 'Garamond', 'Big Caslon', 'Times New Roman', 'serif';
+	--font-family-hoefler       : 'Hoefler Text', 'Baskerville old face', 'Garamond', 'Times New Roman', 'serif';
+	--font-family-lucida-bright : 'Lucida Bright', 'Georgia', 'serif';
+	--font-family-palatino      : 'Palatino', 'Palatino Linotype', 'Palatino LT STD', "Book Antiqua", 'Georgia', 'serif';
+
+	/* Type variables */
+
+	--font-size-large:         calc(var(--base-font-size) * 1.25);
+	--font-size-small:         calc(var(--base-font-size) * 0.85);
+
+	--font-size-h1:            calc(var(--base-font-size) * 2.6);
+	--font-size-h2:            calc(var(--base-font-size) * 2.15);
+	--font-size-h3:            calc(var(--base-font-size) * 1.7);
+	--font-size-h4:            calc(var(--base-font-size) * 1.25);
+	--font-size-h5:            var(--base-font-size);
+	--font-size-h6:            calc(var(--base-font-size) * 0.85);
+
+	--headings-font-family: inherit;
+	--headings-font-weight: 500;
+	--headings-line-height: 1.1;
+	--headings-color: inherit;
+	--headings-small-color: var(--color-gray-light);
+}

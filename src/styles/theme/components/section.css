@@ -11,13 +11,14 @@
 	text-align: center;
 	position: relative;
 	padding: 40px 0;
+	z-index: 2;
 
 	&:after {
 		content: '';
 		background-image: url(../../../images/sep-red.png);
 		background-repeat: repeat-x;
-		background-size: 20px;
-		width: 150px;
+		background-size: 15px;
+		width: 172px;
 		margin-left: -75px;
 		height: 20px;
 		position: absolute;
@@ -34,7 +35,7 @@
 	&:first-child {
 		.Section {
 			&-title {
-				margin-top: 100px;
+				margin-top: 0px;
 			}
 		}
 	}
@@ -61,12 +62,16 @@
 		&:nth-child(even) {
 			.Section {
 				&-title {
-					margin-left: 300px;
+					@media (--large) {
+						margin-left: 300px;
+					}
 				}
 
 				&-list {
-					text-align: right;
-					margin-left: -50%;
+					@media (--large) {
+						text-align: right;
+						margin-left: -50%;
+					}
 				}
 			}
 		}
@@ -80,7 +85,7 @@
 		margin-bottom: 20px;
 		position: relative;
 
-		@media (--small-3) {
+		@media (--large) {
 			margin-left: -300px;
 		}
 
@@ -131,12 +136,13 @@
 	&-list {
 		margin: 0;
 		padding: 0;
-		display: inline-block;
 		clear: fix;
 		list-style: none;
 		margin-top: 20px;
+		transition: all .3s ease;
 
-		@media (--small-3) {
+		@media (--large) {
+			display: inline-block;
 			text-align: right;
 			margin-left: 50%;
 		}

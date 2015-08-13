@@ -109,7 +109,7 @@ gulp.task('bemlint', () => {
 	/**
 	 * Rules: https://github.com/stylelint/stylelint/blob/master/docs/rules.md
 	 */
-	const myConfig = {
+	const customConfig = {
 		rules: {
 			indentation: [2, 'tab'],
 			'number-leading-zero': 0,
@@ -120,7 +120,7 @@ gulp.task('bemlint', () => {
 	};
 
 	const config = {
-		rules: assign(configSuitcss.rules, myConfig.rules),
+		rules: assign(configSuitcss.rules, customConfig.rules),
 	};
 
 	return gulp.src(SRC + 'styles/**/components/**/*.css')
@@ -136,29 +136,31 @@ gulp.task('bemlint', () => {
  * Styles task
  */
 gulp.task('styles', () => {
+	const postcssPlugins = [
+		cssnext({
+			messages: {
+				browser: false,
+				console: false,
+			},
+		}),
+		postcssImport(),
+		postcssBem,
+		postcssClearfix,
+		postcssNested,
+		postcssHexrgba,
+		postcssResponsiveType,
+		postcssEasings,
+		lost,
+		postcssReporter({
+			clearMessages: true,
+		})
+	];
+
 	return gulp.src(SRC + 'styles/styles.css')
 		/*.pipe($.changed(DEST + 'styles', {extension: '.css'}))*/
 		/*.pipe($.sourcemaps.init())*/
 		.pipe($.plumber())
-		.pipe($.postcss([
-			cssnext({
-				messages: {
-					browser: false,
-					console: false,
-				},
-			}),
-			postcssImport(),
-			postcssBem,
-			postcssClearfix,
-			postcssNested,
-			postcssHexrgba,
-			postcssResponsiveType,
-			postcssEasings,
-			lost,
-			postcssReporter({
-				clearMessages: true,
-			}),
-		]))
+		.pipe($.postcss(postcssPlugins))
 		.pipe($.replace('../../node_modules/font-awesome/fonts/fontawesome-webfont', '../fonts/font-awesome/fontawesome-webfont'))
 		.pipe($.if(RELEASE, $.uncss({
 			html: [DEST + 'index.html'],
@@ -168,7 +170,13 @@ gulp.task('styles', () => {
 		.pipe($.if(RELEASE, $.cssnano())) // minify
 		.pipe($.size({title: 'styles'}))
 		/*.pipe($.sourcemaps.write('.'))*/
+		// .pipe($.rev())
 		.pipe(gulp.dest(DEST + '/styles'))
+		// .pipe($.rev.manifest({
+		// 	base: DEST,
+		// 	merge: true
+		// }))
+		// .pipe(gulp.dest(DEST))
 		.pipe($.if(!RELEASE, reload({stream: true})));
 });
 
@@ -190,8 +198,10 @@ gulp.task('styleguide', () => {
  */
 gulp.task('scripts', () => {
 	const SCRIPTS = [
+		BOWER + 'jQuery.dotdotdot/src/js/jquery.dotdotdot.js',
 		SRC + 'scripts/**/*.js',
 	];
+
 	return gulp.src(SCRIPTS)
 		/* .pipe($.changed(DEST + 'scripts', {extension: '.js'}))*/
 		.pipe($.concat('scripts.js'))
@@ -200,7 +210,13 @@ gulp.task('scripts', () => {
 		}))
 		.pipe($.if(RELEASE, $.uglify({preserveComments: 'some'})))
 		.pipe($.size({title: 'scripts'}))
+		// .pipe($.rev())
 		.pipe(gulp.dest(DEST + 'scripts'))
+		// .pipe($.rev.manifest({
+		// 	base: DEST,
+		// 	merge: true,
+		// }))
+		.pipe(gulp.dest(DEST))
 		.pipe($.if(!RELEASE, reload({stream: true})));
 });
 
@@ -211,7 +227,7 @@ gulp.task('pages', () => {
 	return gulp.src(SRC + '/templates/pages/*.hbs')
 		.pipe($.plumber())
 		.pipe($.if('*.hbs', $.assemble({
-			data: SRC + '/data/*.json',
+			data: [SRC + '/data/*.json', 'rev-manifest.json'],
 			partials: [
 				'./*.md', SRC + '/templates/partials/**/*.hbs',
 				SRC + '/templates/components/**/*.hbs',

@@ -22,12 +22,17 @@
 	 */
 	&-video {
 		position: absolute;
-		top: 0;
+		top: -20%;
 		left: 0;
 		right: 0;
 		height: 100%;
 		width: 100%;
 		overflow: hidden;
+		display: none;
+
+		@media (--xl) {
+			display: block;
+		}
 
 		&-filter {
 			position: absolute;
@@ -39,10 +44,6 @@
 			/*background-color: rgba(#91d1c4, .2);*/
 		}
 
-		/*@include bp-medium-2() {
-			display: block;
-		}*/
-
 		video {
 			position: absolute;
 			z-index: 0;
@@ -50,11 +51,6 @@
 			left: 0;
 			bottom: 0;
 			width: 100%;
-			display: none;
-
-			@media (--small-3) {
-				display: block;
-			}
 		}
 	}
 
@@ -108,7 +104,7 @@
 		}
 
 		h2 {
-			letter-spacing: 3px;
+			/*letter-spacing: 3px;*/
 			font-weight: 700;
 			font-family: var(--font-family-serif);
 			white-space: nowrap;
@@ -129,22 +125,21 @@
 				content: '';
 				background-image: url(../../../images/sep-white.png);
 				background-repeat: repeat-x;
-				background-size: 20px;
-				width: 150px;
-				margin-left: -75px;
+				background-size: 19px;
+				width: 120%;
+				margin-left: -50%;
 				height: 20px;
 				position: absolute;
 				bottom: -5px;
 				left: 50%;
-			}
 
-			/*@include bp-small-3() {
-				@include font-size(3.5);
-			}*/
+				@media (--large) {
+					width: 100%;
+				}
+			}
 
 			span {
 				font-weight: 100;
-				/*color: #fff;*/
 				animation: blink 1s infinite;
 				display: none;
 			}
@@ -183,41 +178,72 @@
 			position: relative;
 			clear: fix;
 			margin-bottom: -40%;
+
+			img {
+				width: 110%;
+				position: absolute;
+				left: 0;
+
+				&:nth-child(7) {
+					position: relative;
+					top: -30px;
+					z-index: 1;
+				}
+
+				&:nth-child(6) {
+					top: -80px;
+					z-index: 0;
+				}
+
+				&:nth-child(5) {
+					top: -100px;
+				}
+
+				&:nth-child(4) {
+					top: -100px;
+				}
+
+				&:nth-child(3) {
+					top: -100px;
+				}
+
+				&:nth-child(2) {
+					top: -60px;
+				}
+
+				&:nth-child(1) {
+					top: -40px;
+				}
+			}
 		}
 
-		img {
-			width: 110%;
-			position: absolute;
-			left: 0;
+		&-ufo {
+			img {
+				width: 70px;
+				position: absolute;
+				top: 35%;
+				z-index: 1;
+				animation: 30s 10s anim-ufo ease infinite;
+				opacity: 0;
+				display: none;
 
-			&:nth-child(7) {
-				position: relative;
-				top: -30px;
-			}
-
-			&:nth-child(6) {
-				top: -80px;
-			}
-
-			&:nth-child(5) {
-				top: -100px;
-			}
-
-			&:nth-child(4) {
-				top: -100px;
-			}
-
-			&:nth-child(3) {
-				top: -100px;
-			}
-
-			&:nth-child(2) {
-				top: -60px;
-			}
-
-			&:nth-child(1) {
-				top: -40px;
+				@media (--small-3) {
+					display: block;
+				}
 			}
 		}
  	}
+}
+
+
+@keyframes anim-ufo {
+	0% {
+		right: -10%;
+		opacity: 1;
+	}
+
+	100% {
+		right: 140%;
+		opacity: 1;
+	}
 }

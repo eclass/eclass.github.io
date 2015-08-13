@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "jquery-legacy": "jquery#1.11.2"
+    "jquery-legacy": "jquery#1.11.2",
+    "jQuery.dotdotdot": "~1.7.4"
   }
 }

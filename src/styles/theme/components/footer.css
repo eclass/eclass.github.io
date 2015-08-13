@@ -10,6 +10,10 @@
 	margin-top: 100px;
 	position: relative;
 
+	a {
+		color: var(--color-primary);
+	}
+
 	&-content {
 		padding: 20px;
 		color: var(--color-primary);
@@ -32,5 +36,10 @@
 		@media (--small-3) {
 			max-width: 420px;
 		}
+	}
+
+	&-copyright {
+		opacity: .8;
+		font-size: 12px;
 	}
 }

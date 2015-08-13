@@ -4,7 +4,6 @@
     "Raúl Hernández <raulghm@gmail.com>"
   ],
   "homepage": "https://eclass.io",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/eclass/eclass.github.io.git"
@@ -17,6 +16,7 @@
   ],
   "scripts": {
     "install": "bower install",
+    "dev": "gulp clean && gulp",
     "dist": "gulp clean && gulp build --dist"
   },
   "engines": {
@@ -54,6 +54,7 @@
     "gulp-prettify": "^0.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.3",
+    "gulp-rev": "^5.1.0",
     "gulp-size": "^1.2.3",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-strip-css-comments": "^1.1.0",

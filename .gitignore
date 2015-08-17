@@ -20,6 +20,8 @@ $RECYCLE.BIN/
 !.jshintrc
 !.htaccess
 !.editorconfig
+!.eslintrc
+!.jscsrc
 *~
 
 .DS_Store

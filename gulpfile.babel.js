@@ -242,7 +242,9 @@ gulp.task('pages', () => {
 		.pipe($.if(!RELEASE, reload({stream: true})));
  });
 
-// Clean output directory
+/**
+ * Clean task
+ */
 gulp.task('clean', () => {
 	del([DEST]);
 });

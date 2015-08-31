@@ -9,6 +9,7 @@
  */
 import gulp from 'gulp';
 import del from 'del';
+import path from 'path';
 import runSequence from 'run-sequence';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import merge from 'merge-stream';
@@ -35,7 +36,7 @@ import pngquant from 'imagemin-pngquant';
  */
 const $ = gulpLoadPlugins();
 const argv = minimist(process.argv.slice(2));
-const SRC = 'src/'; // The source input folder
+const SRC = './src/'; // The source input folder
 const DEST = './dist/'; // The build output folder
 const BOWER = './bower_components/'; // The bower input folder
 const RELEASE = !!argv.dist; // Minimize and optimize during the build?
@@ -144,7 +145,7 @@ gulp.task('styles', () => {
 			},
 		}),
 		postcssImport(),
-		postcssBem,
+		// postcssBem,
 		postcssClearfix,
 		postcssNested,
 		postcssHexrgba,
@@ -170,13 +171,15 @@ gulp.task('styles', () => {
 		.pipe($.if(RELEASE, $.cssnano())) // minify
 		.pipe($.size({title: 'styles'}))
 		/*.pipe($.sourcemaps.write('.'))*/
-		// .pipe($.rev())
+		.pipe($.if(RELEASE, $.rev()))
 		.pipe(gulp.dest(DEST + '/styles'))
-		// .pipe($.rev.manifest({
-		// 	base: DEST,
-		// 	merge: true
-		// }))
-		// .pipe(gulp.dest(DEST))
+		.pipe($.if(RELEASE,
+			$.rev.manifest(SRC + 'data/rev-manifest.json', {
+				base: DEST,
+				merge: true
+			})
+		))
+		.pipe($.if(RELEASE, gulp.dest(DEST)))
 		.pipe($.if(!RELEASE, reload({stream: true})));
 });
 
@@ -210,13 +213,15 @@ gulp.task('scripts', () => {
 		}))
 		.pipe($.if(RELEASE, $.uglify({preserveComments: 'some'})))
 		.pipe($.size({title: 'scripts'}))
-		// .pipe($.rev())
+		.pipe($.if(RELEASE, $.rev()))
 		.pipe(gulp.dest(DEST + 'scripts'))
-		// .pipe($.rev.manifest({
-		// 	base: DEST,
-		// 	merge: true,
-		// }))
-		.pipe(gulp.dest(DEST))
+		.pipe($.if(RELEASE,
+			$.rev.manifest(SRC + 'data/rev-manifest.json', {
+				base: DEST,
+				merge: true,
+			})
+		))
+		.pipe($.if(RELEASE, gulp.dest(DEST)))
 		.pipe($.if(!RELEASE, reload({stream: true})));
 });
 
@@ -226,18 +231,24 @@ gulp.task('scripts', () => {
 gulp.task('pages', () => {
 	return gulp.src(SRC + '/templates/pages/*.hbs')
 		.pipe($.plumber())
-		.pipe($.if('*.hbs', $.assemble({
-			data: [SRC + '/data/*.json', 'rev-manifest.json'],
-			partials: [
-				'./*.md', SRC + '/templates/partials/**/*.hbs',
-				SRC + '/templates/components/**/*.hbs',
-			],
-			layout: 'default',
-			layoutext: '.hbs',
-			layoutdir: SRC + '/templates/layouts',
-		})))
+		// .pipe($.data(() => {
+		// 	return require(SRC + 'data/data.json');
+		// }))
+		.pipe($.frontMatter({ property: 'data' }))
+		.pipe($.hb({
+			data: {
+				rev: require(SRC + 'data/rev-manifest.json'),
+				data: require(SRC + 'data/data.json'),
+				dist: RELEASE,
+			},
+			helpers: SRC + 'helpers/*.js',
+			partials: SRC + 'templates/partials/**/*.hbs',
+		}))
 		.pipe($.size({title: 'HTML'}))
 		.pipe($.prettify({indent_size: 2}))
+		.pipe($.rename({
+			extname: '.html'
+		}))
 		.pipe(gulp.dest(DEST))
 		.pipe($.if(!RELEASE, reload({stream: true})));
  });
@@ -257,14 +268,14 @@ gulp.task('default', ['serve', 'watch']);
 /**
  * Build task
  */
-gulp.task('build', () => {
+gulp.task('build', ['pages'], () => {
 	runSequence([
 		'fonts',
 		'images',
-		'pages',
 		'styles',
 		'vendor',
 		'scripts',
+		'pages',
 	]);
 });
 

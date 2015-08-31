@@ -2,13 +2,14 @@
   "name": "raulghm",
   "version": "0.2.0",
   "authors": [
-    "Raúl Hernández <raulghm@gmail.com>"
+    "Raul Hernandez <raulghm@gmail.com>"
   ],
   "homepage": "https://eclass.io",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "jquery-legacy": "jquery#1.11.2",
+    "jquery-legacy": "jquery#1.11.3",
+    "jquery-modern": "jquery#2.1.4",
     "jQuery.dotdotdot": "~1.7.4"
   }
 }

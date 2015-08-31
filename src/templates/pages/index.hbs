@@ -3,6 +3,10 @@ title: eClass.io
 description: content
 ---
 
-{{> hero}}
-{{> main}}
-{{> footer}}
+{{#extend "layout"}}
+	{{#content "content"}}
+		{{> hero}}
+		{{> main}}
+		{{> footer}}
+	{{/content}}
+{{/extend}}

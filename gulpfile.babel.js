@@ -234,7 +234,7 @@ gulp.task('pages', () => {
 		// .pipe($.data(() => {
 		// 	return require(SRC + 'data/data.json');
 		// }))
-		.pipe($.frontMatter({ property: 'data' }))
+		// .pipe($.frontMatter({ property: 'meta' }))
 		.pipe($.hb({
 			data: {
 				rev: require(SRC + 'data/rev-manifest.json'),

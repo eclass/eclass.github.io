@@ -230,12 +230,12 @@ gulp.task('scripts', () => {
  */
 gulp.task('pages', () => {
 	return gulp.src(SRC + '/templates/pages/*.hbs')
+		.pipe($.changed(SRC + '/templates', {extension: '.hbs'}))
 		.pipe($.plumber())
-		// .pipe($.data(() => {
-		// 	return require(SRC + 'data/data.json');
-		// }))
-		// .pipe($.frontMatter({ property: 'meta' }))
+		.pipe($.frontMatter({ property: 'meta' }))
 		.pipe($.hb({
+			debug: true,
+			bustCache: true,
 			data: {
 				rev: require(SRC + 'data/rev-manifest.json'),
 				data: require(SRC + 'data/data.json'),
@@ -245,7 +245,6 @@ gulp.task('pages', () => {
 			partials: SRC + 'templates/partials/**/*.hbs',
 		}))
 		.pipe($.size({title: 'HTML'}))
-		.pipe($.prettify({indent_size: 2}))
 		.pipe($.rename({
 			extname: '.html'
 		}))

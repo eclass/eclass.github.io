@@ -16,8 +16,8 @@
   ],
   "scripts": {
     "install": "bower install",
-    "dev": "gulp clean && gulp",
-    "dist": "gulp clean && gulp build --dist"
+    "dev": "npm install && bower install && gulp clean && gulp",
+    "dist": "npm install && bower install && gulp clean && gulp build --dist"
   },
   "engines": {
     "node": ">= 0.12.0",
@@ -56,7 +56,6 @@
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^5.1.10",
-    "gulp-prettify": "^0.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.3",
     "gulp-rev": "^5.1.0",

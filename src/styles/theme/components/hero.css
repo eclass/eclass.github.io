@@ -6,6 +6,20 @@
  * @since 2015-07-28
  */
 
+/* uncss:ignore */
+@keyframes anim-ufo {
+	0% {
+		right: -10%;
+		opacity: 1;
+	}
+
+	100% {
+		right: 140%;
+		opacity: 1;
+	}
+}
+
+
 .Hero {
 	position: relative;
 	background: linear-gradient(top, #fff , #1C0300);
@@ -233,16 +247,4 @@
 			}
 		}
  	}
-}
-
-@keyframes anim-ufo {
-	0% {
-		right: -10%;
-		opacity: 1;
-	}
-
-	100% {
-		right: 140%;
-		opacity: 1;
-	}
 }

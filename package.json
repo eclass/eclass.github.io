@@ -46,6 +46,7 @@
     "gulp-filter": "^2.0.2",
     "gulp-front-matter": "^1.2.3",
     "gulp-hb": "^2.6.1",
+    "gulp-htmlmin": "^1.1.4",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^2.3.0",
     "gulp-jscs": "^2.0.0",

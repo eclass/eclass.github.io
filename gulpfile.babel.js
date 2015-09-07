@@ -1,6 +1,6 @@
 /**
  * Gulpfile Setup
- * @author Raúl Hernández <raulghm@gmail.com>
+ * @author Raul Hernandez <raulghm@gmail.com>
  * @since 2015-07-01
  */
 
@@ -234,7 +234,7 @@ gulp.task('pages', () => {
 		.pipe($.plumber())
 		.pipe($.frontMatter({ property: 'meta' }))
 		.pipe($.hb({
-			debug: true,
+			// debug: true,
 			bustCache: true,
 			data: {
 				rev: require(SRC + 'data/rev-manifest.json'),
@@ -244,6 +244,7 @@ gulp.task('pages', () => {
 			helpers: SRC + 'helpers/*.js',
 			partials: SRC + 'templates/partials/**/*.hbs',
 		}))
+		.pipe($.htmlmin({collapseWhitespace: true}))
 		.pipe($.size({title: 'HTML'}))
 		.pipe($.rename({
 			extname: '.html'

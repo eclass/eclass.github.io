@@ -24,7 +24,7 @@
     "npm": ">=2.1.5"
   },
   "dependencies": {
-    "assemble": "0.4.42",
+    "assemble": "0.24.3",
     "babel-core": "5.8.38",
     "babel-eslint": "3.1.30",
     "browser-sync": "2.26.3",

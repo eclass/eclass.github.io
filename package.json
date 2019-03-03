@@ -95,6 +95,6 @@
     "stylelint": "0.4.1",
     "stylelint-config-suitcss": "0.3.0",
     "suitcss-base": "0.8.0",
-    "suitcss-utils": "0.10.3"
+    "suitcss-utils": "0.12.0"
   }
 }

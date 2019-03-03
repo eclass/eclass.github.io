@@ -84,7 +84,7 @@
     "postcss-bem": "0.3.2",
     "postcss-bem-linter": "0.4.0",
     "postcss-clearfix": "0.1.6",
-    "postcss-easings": "0.2.0",
+    "postcss-easings": "0.3.0",
     "postcss-hexrgba": "0.1.2",
     "postcss-import": "6.2.0",
     "postcss-nested": "0.3.2",

@@ -79,7 +79,7 @@
     "lost": "6.8.1",
     "merge-stream": "0.1.8",
     "minimist": "1.2.0",
-    "path": "0.11.14",
+    "path": "0.12.7",
     "plumber": "0.4.8",
     "postcss-bem": "0.3.2",
     "postcss-bem-linter": "0.4.0",

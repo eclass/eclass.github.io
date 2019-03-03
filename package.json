@@ -81,7 +81,7 @@
     "minimist": "1.2.0",
     "path": "0.11.14",
     "plumber": "0.4.8",
-    "postcss-bem": "0.3.2",
+    "postcss-bem": "0.4.1",
     "postcss-bem-linter": "0.4.0",
     "postcss-clearfix": "0.1.6",
     "postcss-easings": "0.2.0",

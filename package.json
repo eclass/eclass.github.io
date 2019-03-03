@@ -93,7 +93,7 @@
     "postcss-style-guide": "0.4.2",
     "run-sequence": "1.2.2",
     "stylelint": "0.4.1",
-    "stylelint-config-suitcss": "0.3.0",
+    "stylelint-config-suitcss": "0.5.1",
     "suitcss-base": "0.8.0",
     "suitcss-utils": "0.10.3"
   }

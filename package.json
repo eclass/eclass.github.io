@@ -30,7 +30,7 @@
     "browser-sync": "2.26.3",
     "cssnext": "1.8.4",
     "del": "1.2.1",
-    "eslint": "0.24.1",
+    "eslint": "5.16.0",
     "font-awesome": "4.7.0",
     "gulp": "3.9.1",
     "gulp-assemble": "0.1.7",
